@@ -1,0 +1,28 @@
+body {
+  margin: 50px 0px;
+}
+
+#word-viz {
+  margin: 40px 0px;
+}
+
+path.link {
+  opacity: 0.5;
+}
+path.active {
+  opacity: 1;
+}
+path.inactive {
+  opacity: 0.3;
+}
+
+.term {
+  opacity: 1;
+}
+.term.active {
+  font-weight: bold;
+  opacity: 1;
+}
+.term.inactive {
+  opacity: 0.3;
+}
