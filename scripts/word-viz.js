@@ -18,10 +18,10 @@ function wordNodeId(country, term) {
 $(function() {
   // request all the data async
   Promise.all([
-    d3.csv("/data/india-words.csv"),
-    d3.csv("/data/nigeria-words.csv"),
-    d3.csv("/data/uk-words.csv"),
-    d3.csv("/data/usa-words.csv"),
+    d3.csv("data/india-words.csv"),
+    d3.csv("data/nigeria-words.csv"),
+    d3.csv("data/uk-words.csv"),
+    d3.csv("data/usa-words.csv"),
   ]).then(function(data) {
     // once they all come back, parse all the data in nicer forms
     topWords = [];
@@ -175,7 +175,7 @@ function drawWordLists(wordData) {
 }
 
 MINI_WIDTH = 308;
-MINI_HEIGHT = 200;
+MINI_HEIGHT = 161;
 MINI_BOX_HEIGHT = 5;
 MINI_BOX_WIDTH = 74;
 
@@ -196,7 +196,7 @@ function drawMiniGrid(wordData, term, divId) {
       .text(countryName)
         .attr("font-family", "sans-serif")
         .attr("font-size", "14px")
-        .attr("fill", "#999");
+        .attr("fill", "#CCC");
     column.selectAll("rect")
       .data(wordData[i]['words'])
       .enter()
