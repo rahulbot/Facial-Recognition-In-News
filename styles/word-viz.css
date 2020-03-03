@@ -3,7 +3,12 @@ body {
 }
 
 #word-viz {
-  margin: 40px 0px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+h2 {
+  margin-bottom: 30px;
 }
 
 path.link {
@@ -25,4 +30,7 @@ path.inactive {
 }
 .term.inactive {
   opacity: 0.3;
+}
+
+.mini-chart {
 }
