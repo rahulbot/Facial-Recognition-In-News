@@ -196,15 +196,16 @@ function drawMiniGrid(wordData, term, divId) {
       .text(countryName)
         .attr("font-family", "sans-serif")
         .attr("font-size", "14px")
-        .attr("fill", "#CCC");
+        .attr("fill", "#000");
     column.selectAll("rect")
       .data(wordData[i]['words'])
       .enter()
       .append("rect")
+        .attr("class", d => (d.term == term) ? 'active' : 'inactive')
         .attr("x", 0)
         .attr("y", (d, idx) => 20+(MINI_BOX_HEIGHT+2)*idx)
         .attr("width", MINI_BOX_WIDTH)
         .attr("height", MINI_BOX_HEIGHT)
-        .attr("fill", d => (d.term == term) ? WORD_COLOR_SCALE(termsWithLinks.indexOf(d.term)) : '#eee')
+        .attr("fill", d => (d.term == term) ? WORD_COLOR_SCALE(termsWithLinks.indexOf(d.term)) : '#000')
   }
 }
