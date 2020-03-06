@@ -1,12 +1,22 @@
 
 // constants used throughout
-STOP_WORDS = ["facial", "recognition", "detection", "tracking", "facial-recognition"];
+STOP_WORDS = ["facial", "recognition", "detection", "tracking", "recognise", "surveillance", "facial-recognition", "headlines", "fri", "india"];
+REPLACEMENTS = { 'scans': 'scan' }
 WORDS_TO_SHOW = 20;
 WORD_COLOR_SCALE = d3.scaleOrdinal(d3.schemeCategory10);
 
 // helper function to remove stop words that were part of the search
 function removeStopWords(wordList) {
   return wordList.filter(word => !STOP_WORDS.includes(word.term));
+}
+
+// helper function to clean up raw data little more by replacing some terms
+function replaceWords(wordList) {
+  return wordList.map(word => (word.term in REPLACEMENTS) ? {...word, term: REPLACEMENTS[word.term]} : word );
+}
+
+function cleanData(wordList){
+  return replaceWords(wordList.filter(word => !STOP_WORDS.includes(word.term)));
 }
 
 // simple central naming function
@@ -27,19 +37,19 @@ $(function() {
     topWords = [];
     topWords[0] = {
       countryName: 'India',
-      words: removeStopWords(data[0]).slice(0,WORDS_TO_SHOW),
+      words: cleanData(data[0]).slice(0,WORDS_TO_SHOW),
     };
     topWords[1] = {
       countryName: 'Nigeria',
-      words: removeStopWords(data[1]).slice(0,WORDS_TO_SHOW),
+      words: cleanData(data[1]).slice(0,WORDS_TO_SHOW),
     };
     topWords[2] = {
       countryName: 'UK',
-      words: removeStopWords(data[2]).slice(0,WORDS_TO_SHOW),
+      words: cleanData(data[2]).slice(0,WORDS_TO_SHOW),
     };
     topWords[3] = {
       countryName: 'USA',
-      words: removeStopWords(data[3]).slice(0,WORDS_TO_SHOW),
+      words: cleanData(data[3]).slice(0,WORDS_TO_SHOW),
     };
     //console.log(topWords);
     // draw the main word link viz
