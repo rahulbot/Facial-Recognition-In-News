@@ -18,29 +18,18 @@
       <div class="row">
         <div class="col-lg header">
           <h1>Facial Recognition in the News</h1>
-          <h2><small class="text-muted">the top terms used to talk about facial recognition in english language news sources</small></h2>
+          <h2><small class="text-muted">the top terms used to talk about facial recognition in English-language news sources</small></h2>
           <p><i>By: Rahul Bhargava</i></p>
         </div>
         <div class="col-lg">
           <p>
-            At the <a href="https://civic.mit.edu">MIT Center for Civic Media</a> I work on <a href="https://mediacloud.org">Media Cloud</a>, a set of tools and processes for studying attention and influence in online news.
-            We work with, and often get inspired by other data-centered and visualization projects. I recently came across
-            <a href="https://densitydesign.org/">The Density Design lab</a> of the Politecnico Milan, who do wonderful work researching and teaching
-            how to visualize complex phenomenon.
+          This sketch looks at how facial recognition was covered in English-language online news in the US, UK, India and Nigeria between January of 2019 and March of 2020.
           </p>
           <p>
-            A recent project in their Final Synthesis Design Studio course created an interesting visual, and produced some inital findings, on
-            how different people on global social media networks discuss
-            <a href="https://densitydesign.github.io/teaching-dd15/course-results/es02/group10/">focused on facial recognition</a>.
-            My collegue Joy Buolamwini, PhD student in our group, founded the <a href="https://www.ajlunited.org/library/home">Algorithmic Justice League</a>
-            and does some of the most important early work on this topic, so I was interested to read their findings.
+          Inspired by <a href="https://densitydesign.org/">The Density Design lab</a> at the Politecnico Milan, which does wonderful work researching and teaching how to visualize complex phenomena, this sketch responds to <a href="https://densitydesign.github.io/teaching-dd15/course-results/es02/group10/">a recent project from their Final Synthesis Design Studio course</a>. That project created an interesting visual — and produced some initial findings — on how different people on global social media networks discuss facial recognition. <a href="https://densitydesign.github.io/teaching-dd15/course-results/es02/group10/question02/">Their second research question</a> was particularly interesting to me: "In which terms are people talking about facial recognition on the most popular social media platforms in U.S. (and other English speaking countries), China, Italy and India?"
           </p>
           <p>
-            Their
-            2nd research question was particularly interesting to me:
-            <i>"In which terms are people talking about facial recognition on the most popular social media platforms in U.S. (and other English speaking countries), China, Italy and India?"</i>
-            Inspired by <a href="https://densitydesign.github.io/teaching-dd15/course-results/es02/group10/question02/">their work researching and visualizing this</a>,
-            I decided to look at how facial recognition was covered in English-language online news in various countries between January of 2019 and March of 2020.
+          I was interested to read their findings, because my colleague Joy Buolamwini, a PhD student in our group, the <a href="https://civic.mit.edu">MIT Center for Civic Media</a>, founded the <a href="https://www.ajlunited.org/library/home">Algorithmic Justice League</a> and has done some of the most important early work on this topic. My own work includes <a href="https://mediacloud.org">Media Cloud</a>, a set of tools and processes for studying attention and influence in online news. We work with, and often get inspired by other data-centered and visualization projects. Using a Media Cloud search to gather my data, I set out to create this quick visualization and further the conversation on how our news media discusses facial recognition.
           </p>
         </div>
       </div>
@@ -54,9 +43,7 @@
         <div class="col-lg">
           <div id="word-viz"></div>
           <p>
-            The diagram above shows the top words used in close proximity to phrases like "facial recognition". Each column represents the
-            top 20 words from a different country's English language news media online. Rollover a word to highlight where it shows up
-            on each country's list.
+            The visualization above shows the top 20 words used in close proximity to phrases like "facial recognition" in frout different countries. The data is soured from Media Cloud's collections of national media sources for <a href="https://sources.mediacloud.org/#/collections/34412118">India</a>, <a href="https://sources.mediacloud.org/#/collections/38376341">Nigeria</a>, <a href="https://sources.mediacloud.org/#/collections/34412476">the UK</a> and <a href="https://sources.mediacloud.org/#/collections/34412234">the US</a>. This content was filtered to include only English-language articles between January of 2019 and March of 2020. Keywords matching the search phrases were removed. Rollover a word to highlight where it shows up on each country's list.
           </p>
         </div>
       </div>
@@ -64,52 +51,59 @@
       <div class="row">
         <div class="col-lg">
           <h2>Initial Observations</h2>
+          <p>
+            This is just a quick sketch to compare online news reporting to the Density Design Lab's social media results. A real investigation would require more time and a dive into the data. However, this quick visualization already reveals some interesting similarities and differences. Below are three things worth highlighting, each presented with a miniature version of the visualization to give some context for where the mentioned words show up.
+          <p>
         </div>
       </div>
 
-<!--
       <div id="observations">
         <div class="row">
           <div class="col-lg">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Facebook is the top term</h5>
-                <p class="card-text">Facebook is the top related term in <b>all</b> of these countries.</p>
-                <div class="observation-chart" id="observation-facebook"></div>
+                <h5 class="card-title">Big Tech Worries</h5>
+                <p class="card-text">
+                  Not surprisingly Facebook, Amazon and Google are central to online news reports about facial recognition. While in the Density Design Lab data Alibaba shows up as a top social media term in both China and US social media data, it barely registers in our online news data.
+                </p>
+                <div class="observation-chart" id="observation-bigtech"></div>
               </div>
             </div>
           </div>
           <div class="col-lg">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Google gets a pass</h5>
-                <p class="card-text">US Tech Giants: Google is discussed less than Facebook and Amazon.</p>
-                <div class="observation-chart" id="observation-google"></div>
+                <h5 class="card-title">Privacy is Paramount</h5>
+                <p class="card-text">
+                  This shows up as a top term in all four of our countries, matching the social media data from the Density Design Lab. Clearly the question of facial recognition is closely tied to privacy concerns in both online news and social media posts.
+                </p>
+                <div class="observation-chart" id="observation-privacy"></div>
               </div>
             </div>
           </div>
           <div class="col-lg">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Photo sensitivity is cultural</h5>
-                <p class="card-text">Photos show up much lower in India nad Nigeria.</p>
-                <div class="observation-chart" id="observation-photos"></div>
+                <h5 class="card-title">Social Good?</h5>
+                <p class="card-text">
+                  Our news data includes reporting on multiple purposes of facial recognition - “id”, “unlock”, “authentication”, “railway”, “iPhone”. However the Density Design Lab data also includes “security check” and “police force”, and “fight crime” - a narrative prevalent in social media that seems missing in the news reporting.
+                </p>
+                <div class="observation-chart" id="observation-purpose"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-    -->
-
       <div class="row">
         <div class="col-lg">
-          <h4>Source: Media Cloud</h4>
+          <h2>Sources:</h2>
           <ul>
+            <li><a href="https://densitydesign.github.io/teaching-dd15/course-results/es02/group10/">DENSITYDESIGN FSDS 2019/2020 - Group 10 Project</li>
             <li><a href="https://explorer.mediacloud.org/#/queries/search?qs=%5B%7B%22label%22%3A%22USA%22%2C%22q%22%3A%22(%5C%22face%20surveillance%5C%22%20OR%20%5C%22facial%20surveillance%5C%22%20OR%20%5C%22face%20tracking%5C%22%20OR%20%5C%22facial%20tracking%5C%22%20OR%20%5C%22face%20recognition%5C%22%20OR%20%5C%22facial%20recognition%5C%22%20OR%20%5C%22face%20detection%5C%22%20OR%20%5C%22facial%20detection%5C%22%20OR%20%5C%22face%20ID%5C%22%20OR%20%5C%22facial%20identification%5C%22%20OR%20%5C%22face-recognition%5C%22%20OR%20%5C%22facial-recognition%5C%22)%20and%20language%3Aen%22%2C%22color%22%3A%22%23004dcf%22%2C%22startDate%22%3A%222019-01-01%22%2C%22endDate%22%3A%222020-03-01%22%2C%22sources%22%3A%5B%5D%2C%22collections%22%3A%5B34412234%5D%2C%22searches%22%3A%5B%5D%7D%2C%7B%22label%22%3A%22India%22%2C%22q%22%3A%22(%5C%22face%20surveillance%5C%22%20OR%20%5C%22facial%20surveillance%5C%22%20OR%20%5C%22face%20tracking%5C%22%20OR%20%5C%22facial%20tracking%5C%22%20OR%20%5C%22face%20recognition%5C%22%20OR%20%5C%22facial%20recognition%5C%22%20OR%20%5C%22face%20detection%5C%22%20OR%20%5C%22facial%20detection%5C%22%20OR%20%5C%22face%20ID%5C%22%20OR%20%5C%22facial%20identification%5C%22%20OR%20%5C%22face-recognition%5C%22%20OR%20%5C%22facial-recognition%5C%22)%20and%20language%3Aen%22%2C%22color%22%3A%22%23db3e00%22%2C%22startDate%22%3A%222019-01-01%22%2C%22endDate%22%3A%222020-03-01%22%2C%22sources%22%3A%5B%5D%2C%22collections%22%3A%5B34412118%5D%2C%22searches%22%3A%5B%5D%7D%2C%7B%22label%22%3A%22Nigeria%22%2C%22q%22%3A%22(%5C%22face%20surveillance%5C%22%20OR%20%5C%22facial%20surveillance%5C%22%20OR%20%5C%22face%20tracking%5C%22%20OR%20%5C%22facial%20tracking%5C%22%20OR%20%5C%22face%20recognition%5C%22%20OR%20%5C%22facial%20recognition%5C%22%20OR%20%5C%22face%20detection%5C%22%20OR%20%5C%22facial%20detection%5C%22%20OR%20%5C%22face%20ID%5C%22%20OR%20%5C%22facial%20identification%5C%22%20OR%20%5C%22face-recognition%5C%22%20OR%20%5C%22facial-recognition%5C%22)%20and%20language%3Aen%22%2C%22color%22%3A%22%23008b02%22%2C%22startDate%22%3A%222019-01-01%22%2C%22endDate%22%3A%222020-03-01%22%2C%22sources%22%3A%5B%5D%2C%22collections%22%3A%5B38376341%5D%2C%22searches%22%3A%5B%5D%7D%2C%7B%22label%22%3A%22UK%22%2C%22q%22%3A%22(%5C%22face%20surveillance%5C%22%20OR%20%5C%22facial%20surveillance%5C%22%20OR%20%5C%22face%20tracking%5C%22%20OR%20%5C%22facial%20tracking%5C%22%20OR%20%5C%22face%20recognition%5C%22%20OR%20%5C%22facial%20recognition%5C%22%20OR%20%5C%22face%20detection%5C%22%20OR%20%5C%22facial%20detection%5C%22%20OR%20%5C%22face%20ID%5C%22%20OR%20%5C%22facial%20identification%5C%22%20OR%20%5C%22face-recognition%5C%22%20OR%20%5C%22facial-recognition%5C%22)%20and%20language%3Aen%22%2C%22color%22%3A%22%23B80000%22%2C%22startDate%22%3A%222019-01-01%22%2C%22endDate%22%3A%222020-03-01%22%2C%22sources%22%3A%5B%5D%2C%22collections%22%3A%5B34412476%5D%2C%22searches%22%3A%5B%5D%7D%5D">
               Review results in Media Cloud Explorer
             </a></li>
-            <li>download data</li>
+            <li><a href="https://github.com/rahulbot/Facial-Recognition-In-News/tree/master/data">Download the data from the GitHub repository</a></li>
         </div>
       </div>
 

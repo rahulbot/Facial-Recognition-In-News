@@ -55,9 +55,9 @@ $(function() {
     // draw the main word link viz
     drawWordLists(topWords);
     // draw a set of mini graphs to support findings
-    drawMiniGrid(topWords, 'facebook', 'observation-facebook');
-    drawMiniGrid(topWords, 'google', 'observation-google');
-    drawMiniGrid(topWords, 'photos', 'observation-photos');
+    drawMiniGrid(topWords, ['facebook', 'amazon', 'google'], 'observation-bigtech');
+    drawMiniGrid(topWords, ['privacy'], 'observation-privacy');
+    drawMiniGrid(topWords, ['id', 'unlock', 'authentication', 'railway', 'airport'], 'observation-purpose');
   });
 });
 
@@ -189,7 +189,7 @@ MINI_HEIGHT = 161;
 MINI_BOX_HEIGHT = 5;
 MINI_BOX_WIDTH = 74;
 
-function drawMiniGrid(wordData, term, divId) {
+function drawMiniGrid(wordData, terms, divId) {
   var baseSvg = d3.select("#"+divId).append("svg")
     .attr("class", "mini-chart")
     .attr("width", MINI_WIDTH)
@@ -211,11 +211,11 @@ function drawMiniGrid(wordData, term, divId) {
       .data(wordData[i]['words'])
       .enter()
       .append("rect")
-        .attr("class", d => (d.term == term) ? 'active' : 'inactive')
+        .attr("class", d => (terms.includes(d.term)) ? 'active' : 'inactive')
         .attr("x", 0)
         .attr("y", (d, idx) => 20+(MINI_BOX_HEIGHT+2)*idx)
         .attr("width", MINI_BOX_WIDTH)
         .attr("height", MINI_BOX_HEIGHT)
-        .attr("fill", d => (d.term == term) ? WORD_COLOR_SCALE(termsWithLinks.indexOf(d.term)) : '#000')
+        .attr("fill", d => (terms.includes(d.term)) ? WORD_COLOR_SCALE(termsWithLinks.indexOf(d.term)) : '#000')
   }
 }
